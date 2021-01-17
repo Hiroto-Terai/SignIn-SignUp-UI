@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      // プロパティをカスタマイズするためにcopywithを使用
       theme: ThemeData.dark().copyWith(
+        // アプリのアクセントカラー
         accentColor: kAccentColor,
       ),
       home: WelcomePage(),
@@ -32,7 +34,9 @@ class WelcomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kBackgroundColor,
+      // safeareaはOSにかかわらず画面の範囲内に適切にウィジェットを収めてくれる
       body: SafeArea(
+        // SingleChildScrollView: リスト形式ではないが、画面全体をスクロールできるようにする
         child: SingleChildScrollView(
           child: Column(
             children[],
