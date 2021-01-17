@@ -58,7 +58,7 @@ class _HeaderCurveClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     return Path()
       ..lineTo(0, size.height * 0.5)
-      // ベジエ曲線
+      // ベジエ曲線。最初のx,yは曲線の終着点。2つめのx,yは曲線のコントロールポイント
       ..quadraticBezierTo(
         size.width * 0.55,
         size.height,
